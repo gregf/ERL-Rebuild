@@ -180,6 +180,8 @@ mkdir $ROOT_MNT_DIR/$W_DIR
 ## Cleanup
 echo "Cleaning up"
 rm -rf $TMP_DIR
+umount $BOOT
+umount $ROOT
 
 echo "Installation finished"
 echo "Insert USB drive back into ERL and reset"
