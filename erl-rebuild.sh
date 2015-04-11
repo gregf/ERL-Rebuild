@@ -27,9 +27,6 @@ set -o errexit
 
 # Find the latest here https://www.ubnt.com/download/?group=edgerouter-lite
 RELEASE_TARBALL="http://dl.ubnt.com/firmwares/edgemax/v1.6.0/ER-e100.v1.6.0.4716006.tar"
-DEV=/dev/sdd
-BOOT=/dev/sdd1
-ROOT=/dev/sdd2
 BOOT_MNT_DIR=/mnt/boot
 ROOT_MNT_DIR=/mnt/root
 TMP_DIR=/tmp/tmp.$RANDOM
@@ -90,6 +87,14 @@ askyesno
 if [ $? == 1 ]; then
   exit 0
 fi
+
+echo
+read -e -p "Enter the device you would like to use eg. /dev/sdx): " device
+echo
+
+DEV=$device
+BOOT=${device}1
+ROOT=${device}2
 
 # Umount USB stick filesystems that could be mounted at boot time
 if mount | grep $BOOT > /dev/null; then
