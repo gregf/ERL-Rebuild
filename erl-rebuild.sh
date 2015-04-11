@@ -117,12 +117,14 @@ $PARTED --script $DEV mktable msdos
 echo "Creating boot partition"
 $PARTED --script $DEV mkpart primary fat32 1 150MB
 echo "Formatting boot partition"
+sleep 1
 mkfs.vfat $BOOT
 
 # Root
 echo "Creating root partition"
 $PARTED --script $DEV mkpart primary ext3 150MB 1900MB
 echo "Formatting root partition"
+sleep 1
 mkfs.ext3 -q $ROOT
 
 ## Mount partitions
