@@ -136,7 +136,7 @@ mount -t ext3 $ROOT $ROOT_MNT_DIR
 
 ## Download image
 mkdir $ROOT_MNT_DIR/tmp
-$FETCH $TMP_DIR/edgeos.tar $RELASE_TARBALL
+$FETCH $TMP_DIR/edgeos.tar $RELEASE_TARBALL
 if [ $? == 0 ]; then
   break
 else
