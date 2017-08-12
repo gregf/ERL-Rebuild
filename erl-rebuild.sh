@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Maintainer: Greg Fitzgerald <greg@gregf.org>
+# Maintainer: Greg Fitzgerald <gregf@hugops.pw>
 # Maintainer: Daniil Baturin <daniil at baturin dot org>
 #
 # Copyright (C) 2013 SO3Group
@@ -26,7 +26,7 @@ set -o errexit
 # EdgeOS won't reinstall itself!
 
 # Find the latest here https://www.ubnt.com/download/?group=edgerouter-lite
-RELEASE_TARBALL="https://dl.ubnt.com/firmwares/edgemax/v1.9.1.1/ER-e100.v1.9.1.1.4977347.tar"
+RELEASE_TARBALL="https://dl.ubnt.com/firmwares/edgemax/v1.9.7/ER-e100.v1.9.7+hotfix.1.5005851.tar"
 BOOT_MNT_DIR=/mnt/boot
 ROOT_MNT_DIR=/mnt/root
 TMP_DIR=/tmp/tmp.$RANDOM
