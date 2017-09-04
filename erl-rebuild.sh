@@ -26,7 +26,7 @@ set -o errexit
 # EdgeOS won't reinstall itself!
 
 # Find the latest here https://www.ubnt.com/download/?group=edgerouter-lite
-RELEASE_TARBALL="https://dl.ubnt.com/firmwares/edgemax/v1.9.7/ER-e100.v1.9.7+hotfix.1.5005851.tar"
+RELEASE_TARBALL="https://dl.ubnt.com/firmwares/edgemax/v1.9.7/ER-e100.v1.9.7+hotfix.2.5010182.tar"
 BOOT_MNT_DIR=/mnt/boot
 ROOT_MNT_DIR=/mnt/root
 TMP_DIR=/tmp/tmp.$RANDOM
