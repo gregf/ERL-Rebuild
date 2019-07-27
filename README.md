@@ -10,9 +10,7 @@ If your system still won't boot after a rebuild and you are stuck at the uboot p
 
 Try typing the following into the prompt from minicom.
 
-    setenv boot_erl 'fatload usb 0 $loadaddr vmlinux.64;bootoctlinux $loadaddr coremask=0x3 root=/dev/sda2 rootdelay=15 rw rootsqimg=squashfs.img rootsqwdir=w mtdparts=phys_mapped_flash:512k(boot0),512k(boot1),64k@3072k(eeprom)'
-    setenv bootcmd_orig $(bootcmd)
-    setenv bootcmd 'run boot_erl'
+	setenv bootcmd 'sleep 5; usb reset;fatload usb 0 $loadaddr vmlinux.64;bootoctlinux $loadaddr coremask=0x3 root=/dev/sda2 rootdelay=15 rw rootsqimg=squashfs.img rootsqwdir=w mtdparts=phys_mapped_flash:512k(boot0),512k(boot1),64k@3072k(eeprom)'
     saveenv
     reset
 
